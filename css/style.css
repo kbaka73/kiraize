@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&family=Roboto:wght@100;300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none !important;
+    text-decoration: none !important;
+    font-family: 'Cairo', sans-serif;
+    transition: .3s;
+    scroll-behavior: smooth;
+}
+
+
+:root{
+    --farst:#48ae08;
+    --scind:#000;
+    --red:#bd1313;
+    --eee:#eee;
+    --oraing:orange;
+}
+
+/* center */
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* scrol */
+.up{
+    font-size: 30px;
+    position: fixed;
+    bottom: 60px;
+    left:  70px;
+    background-color: var(--red) !important;
+    color: var(--red);
+    cursor: pointer;
+    transition: .2s;
+    z-index: 58865865;
+    text-align: center;
+    width: 80px;
+    padding: 10px;  
+    animation: kbaka 1s infinite;
+    transition: 5s;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    z-index: -1;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #dee9e7;
+    box-shadow: 0 0 10px #000000 inset;
+    border-radius: 40px;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: #5daa7b;
+    border-radius: 90px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: #007b2f;
+  }
+@keyframes kbaka{
+    0%{
+        box-shadow: 10px 10px 20px var(--scind);
+        padding: 20px;
+    }
+    50%{
+        box-shadow: 10px 10px 20px var(--farst);
+        padding: 0px;
+    }
+    100%{
+        box-shadow: 10px 10px 20px var(--red);
+        padding: 20px;
+    }
+}
+
+
+
+
+.buttonn{
+    color: var(--scind);
+    background-color: var(--farst);
+    padding: 5px 12px;
+    border-radius: 40px;
+    transition:all 1s ease;
+}
+
+.buttonn:hover{
+    color: var(--farst);
+    font-weight: bold;
+    background-color: var(--red);
+    padding: 5px 16px;
+    border-radius: 40px;
+}
+
+.coil{
+    width: 160px;
+}
+
+/* kiraize and icon */
+.fa-phone {
+    font-size: 23px !important;
+    padding-left: 10px;
+}
+.kiraize{
+    color: var(--farst);
+    font-size: 80px;
+}
+/* start header */
+
+.logo{
+    width: 90px;
+    height: 60px;
+    border-radius: 50px;
+}
+
+.navbar{
+    box-shadow: 10px 10px 20px var(--scind);
+    background-color: #ffffff;
+    z-index: 12344;
+    position: sticky !important;
+    top: 0;
+}
+.navbar a{
+    color: var(--scind);
+}
+
+.navbar a:hover{
+    color: var(--farst);
+}
+/* end header */
+
+/* start home */
+
+.main{
+    height: 100vh;
+    width: 100%;
+}
+
+.main .wrapper, .slide{
+    /* overflow: hidden; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.main .slide{
+    overflow: hidden;
+}
+
+.main .slide::before{
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+
+}
+
+.main .slide .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main .slide .image-data{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 12;
+}
+.main .slide .image-data .text{
+    font-size: 70px;
+    text-align: center;
+    color: var(--eee);
+}
+.main .slide .image-data h2{
+    margin-top: 50px;
+text-align: center;
+    font-size: 24px;
+}
+/* end home */
+
+/* start services */
+.services{
+    padding: 60px 0;
+    height: 100vh;
+}
+ .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+ .contact h1{
+    text-align: center ;
+    font-size: 40px;
+    border-bottom:5px solid var(--oraing);
+    border-radius: 4px;
+    color: var(--farst);
+    padding-bottom: 10px;
+}
+.services .container p{
+    padding-top: 50px;
+    text-align: center ;
+    font-size: 24px;
+    
+}
+/* end services */
+
+
+/* kbaka=================== */
+
+.features{
+    padding-bottom: 20px;
+}
+.features .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 20px;
+}
+
+.features .feat{
+    padding: 20px;
+    text-align: center;
+    background-color: var(--farst);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px var(--scind);
+}
+
+.open-one{
+    display: block;
+}
+.features .feat:hover{
+    background-color: var(--red);
+
+}
+
+.features .feat a{
+    background-color: var(--scind);  
+    color: var(--farst);
+}
+.features .feat a:hover{
+    background-color: var(--red);  
+    color: var(--farst);
+}
+    .features .feat .col h4{
+    font-size: 24px;
+    color: var(--scind);
+}
+
+.features .feat .col p{
+    font-size: 18px;
+}
+.features .feat .col i{
+    color: var(--darck);
+    font-size: 50px;
+    z-index: 123123;
+}
+
+/* kbaka=================== */
+
+/* start devices */
+
+.devices .container{
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    display: grid;
+    gap: 20px;
+}
+
+.devices .container .card {
+
+    border-radius: 40px;
+    box-shadow: 3px 5px 20px var(--scind);
+    padding: 20px;
+    background-color: var(--farst);
+}
+
+.devices .container .card p{
+    font-size: 24px;
+}
+.devices .container .card h2 a{
+    background-color: var(--scind);
+    color: var(--red);
+}
+.devices .container .card h1{
+    font-size: 25px;
+    text-align: center;
+    background: var(--scind);
+    border-radius: 50px;
+    padding: 10px 0;
+    color: var(--farst);
+}
+.devices .container .card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+/* end devices */
+
+
+
+/* start  services-tow */
+.services-tow .swiper{
+    padding-top: 60px;
+
+}
+.services-tow .swiper .swiper-slide{
+    background-color: #999;
+    border-radius: 40px;
+    padding: 40px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 10px 10px 20px var(--scind);
+}
+
+/* end services-tow */
+
+
+
+/* end services-three */
+
+.services-three{
+    margin: 190px 0;
+    text-align: center;
+}
+.services-three p{
+    text-align: center;
+    padding: 30px;
+}
+
+/* end services-three */
+
+/* stsart  form */
+.form .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    widows: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+.form .container::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+    filter: blur(50px);
+}
+
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-box .right{
+    padding: 25px 50px;
+}
+.contact-box .right h2{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.contact-box .right h2::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: var(--farst);
+}
+.contact-box .right input{
+    width: 500px;
+    padding: 10px;
+    margin: 20px ;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+}
+
+.contact-box .right .send{
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    width: 500px ;
+    padding:10px 30px;
+    background-color: var(--farst);
+    text-align: center;
+    margin-right: 20px;
+    color: var(--farst);
+}
+.contact-box .right input:focus{
+    border: 3px solid var(--farst);
+}
+.contact-box .right .field{
+    width: 500px;
+    padding: 15px 30px;
+    font-size: 16px;
+    margin-bottom: 22px;
+    transition: .3px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+/*end form */
+
+
+
+
+
+/* start footer */
+footer{
+ 
+    filter: blur(50%);
+    padding: 30px;
+    z-index: -1;
+    border-radius:40px;
+    box-shadow: var(--scind);
+}
+.footer{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 40px;
+    padding: 10px 0;
+
+}
+
+/* end footer */
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width:500px) {
+    
+.services-three{
+    margin-top: 280px;
+}
+.contact-box .right i{
+    font-size: 40px;
+}
+.contact-box .right input{
+    width: 300px;
+
+
+}
+.contact-box .right .field{
+    width: 300px;
+}
+.form{
+    margin-top: 400px;
+}
+.contact-box .right .send{
+    width: 300px;
+}
+}
+
+
+
+.accordion:focus{
+    background-color: var(--farst) !important;
+    border: none !important;
+}
